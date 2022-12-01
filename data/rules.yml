@@ -1,0 +1,50 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: Check the item
+  steps:
+  - intent: item
+  - action: action_item
+
+- rule: Check the video
+  steps:
+  - intent: videos
+  - action: action_item_video
+
+- rule: check the image
+  steps:
+  - intent: ask_image
+  - action: action_get_image
+
+- rule: Activate form
+  steps:
+  - intent: create_user
+  - action: user_form
+  - active_loop: user_form
+
+- rule: User check
+  steps:
+  - action: utter_user_check
+  - intent: affirm
+  - action: utter_check_email
+
+- rule: Submit form
+  condition:
+  - active_loop: user_form
+  steps:
+  - action: user_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: action_submit

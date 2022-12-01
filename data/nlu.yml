@@ -1,0 +1,223 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - yeah
+    - ofc
+    - y
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - naah
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+    - fine
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: item
+  examples: |
+    - How many calories are present in [chicken wings](food_name)?
+    - How many calories are present in [coffee](food_name)?
+    - What is the nutritious data about [omelette](food_name)?
+    - What is the nutritious data about [garlic](food_name)?
+    - How many cal in [cheese](food_name)?
+    - cal in [garlic](food_name)?
+    - [ginger](food_name) has how many cal?
+    - [ginger](food_name), has how many cal?
+    - [ginger](food_name), has how many calories?
+    - [turmeric](food_name) cal
+    - [turmeric](food_name) calories
+    - nutrititous data of [ginger](food_name)
+    - nutrititous data [ginger](food_name)
+    - [ginger](food_name) nutrititous data 
+    - nutrients in [milk](food_name)
+    - nutrients [milk](food_name)
+    - [milk](food_name) nutrients 
+
+- intent: videos
+  examples: |
+    - How to cook this?
+    - How to cook [chicken](food_name)?
+    - How to cook [manchuria](food_name)?
+    - How to make [croissant](food_name)?
+    - Videos on this?
+    - Videos
+    - Videos on [chicken](food_name)?
+
+- lookup: food_name
+  examples: |
+    - Chicken
+    - Egg fried rice
+    - sausage
+    - manchuria
+    - Chicken sausage
+    - hakka noodles
+    - veg noodles
+    - coffee
+    - croissant
+    - garlic
+    - onions
+    - turmeric
+    - ginger
+    - bread
+    - omelette
+    - Idli
+    - Dosa
+    - Pancake
+    - Chocolate Cake
+    - Vada
+    - Puri
+    - Chocolate
+    - pizza
+    - chicken wings
+    - cheese
+    - egg
+    - fish
+    - Pongal
+    - Salmon
+
+- intent: email
+  examples: |
+    - [qwerty@yahoo.com](user_email)
+    - [ovidiunegru@gmail.com](user_email)
+    - [bogdan_show@company.com](user_email)
+    - [dasd@gmail.com](user_email)
+    - [andrei.andreeea84@gmail.com](user_email)
+    - [johndoe69@gmail.com](user_email)
+
+- intent: create_user
+  examples: |
+    - Create an account
+    - Create an acct
+    - Account create
+    - acct create
+
+- intent: ask_image
+  examples: |
+    - Images on this?
+    - Images
+    - Images on [chicken sausage](food_name)?
+
+- intent: ask_cuisine
+  examples: |
+    - Cuisine?
+    - What cuisine is it?
+    - what cuisine is [fish](food_name)
+    - cuisine of [pancake](food_name)
+
+- intent: ask_meal_type
+  examples: |
+    - meal type?
+    - What meal type is it?
+    - what meal type is [fish](food_name)
+    - meal type of [pancake](food_name)
+
+- intent: ask_dish_type
+  examples: |
+    - dish type?
+    - What dish type is it?
+    - what dish type is [fish](food_name)
+    - dish type of [pancake](food_name)
+
+- intent: name
+  examples: |
+    - What is your name?
+    - ur name?
+    - your name?
+
+- intent: created
+  examples: | 
+    - Who created you?
+    - Who developed you?
+
+- intent : age
+  examples: |
+    - What is your age?
+    - ur age?
+    - your age?
+
+- intent: help
+  examples: |
+    - Help
+    - I need help
