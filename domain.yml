@@ -20,6 +20,7 @@ intents:
   - created
   - age
   - help
+  - describe
 
 actions:
   - action_item
@@ -30,6 +31,12 @@ actions:
   - action_age
 
 responses:
+  utter_ask_rephrase:
+  - text: I'm sorry, I didn't quite understand that. Could you rephrase?
+
+  utter_default:
+  - text: I'm sorry, I can't help you.
+
   utter_greet:
   - text: "Hey! How are you?"
 
@@ -84,6 +91,9 @@ responses:
 
   utter_help:
   - text: This is a chatbot that helps you with find number of calories in a food, diet labels, health labels etc.. Not only that it helps you in making of that food items with help of videos. Even you can know what type of cuisine/meal is a dish and many more. Get started by asking cal in food name, cuisine of hakka noodle, images of hakka noodles etc... Ex:cal in chicken?
+
+  utter_describe:
+  - text: Myself Zoos. I help you find number of calories a food contains, diet labels, health labels, cuisine type, dish type and many more... Not only that I can help you in prepare those items with some YouTube videos and articles online.
 
 session_config:
   session_expiration_time: 60

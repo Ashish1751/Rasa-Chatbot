@@ -45,8 +45,10 @@ class ActionItemVideo(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
         food = tracker.get_slot("food_name")
-        if food == None:
+        if not food:
             logger.error("Food attribute is empty")
+            dispatcher.utter_message(text="I'm sorry, I didn't quite understand that. Please check the logs of your action server for more information.")
+            return []
         print(food)
         api_key = "AIzaSyAfhUaXx6IC0Yif1jwkbYosbsN2tNQmjUg"
         youtube = build('youtube', 'v3', developerKey=api_key)
@@ -78,8 +80,10 @@ class ActionItem1(Action):
         
         food = tracker.get_slot("food_name")
         print(food)
-        if food == None:
+        if not food:
             logger.error("Food attribute is empty")
+            dispatcher.utter_message(text="I'm sorry, I didn't quite understand that. Please check the logs of your action server for more information.")
+            return []
         # return []
         url = 'https://api.edamam.com/search?q=' + food + '&app_id=817470ee&app_key=e329ec5077c9bf6736410b49b64c41a2&from=0&to=3' 
         res = requests.get(url)
@@ -123,8 +127,10 @@ class ActionItem(Action):
         
         food = tracker.get_slot("food_name")
         print(food)
-        if food == None:
+        if not food:
             logger.error("Food attribute is empty")
+            dispatcher.utter_message(text="I'm sorry, I didn't quite understand that. Please check the logs of your action server for more information.")
+            return []
         # return []
         food = food.replace(" ", "%20")
         url = "https://api.edamam.com/api/nutrition-data?app_id=2ae12d8e&app_key=1c41fde6eeefe0f9f39d1100d3eed619&ingr=1%20" + food 
@@ -248,8 +254,10 @@ class ActionGetImage(Action):
             
         food = tracker.get_slot("food_name")
         print(food)
-        if food == None:
+        if not food:
             logger.error("Food attribute is empty")
+            dispatcher.utter_message(text="I'm sorry, I didn't quite understand that. Please check the logs of your action server for more information.")
+            return []
         # return []
         food = food.replace(" ", "+")
         url = "https://pixabay.com/api/?key=31483378-7da7104ebaf3528c0ba33ce71&image_type=photo&per_page=5&q=" + food

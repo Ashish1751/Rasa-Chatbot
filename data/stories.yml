@@ -109,6 +109,11 @@ stories:
   - intent: help
   - action: utter_help
 
+- story: describe path
+  steps:
+  - intent: describe
+  - action: utter_describe
+
 - story: multi convo path 1
   steps:
   - intent: item

@@ -103,6 +103,7 @@ nlu:
     - What is the nutritious data about [garlic](food_name)?
     - How many cal in [cheese](food_name)?
     - cal in [garlic](food_name)?
+    - cal in [croissant](food_name)?
     - [ginger](food_name) has how many cal?
     - [ginger](food_name), has how many cal?
     - [ginger](food_name), has how many calories?
@@ -216,6 +217,12 @@ nlu:
     - What is your age?
     - ur age?
     - your age?
+    - How long have you been?
+
+- intent: describe
+  examples: |
+    - Can you describe yourself?
+    - Describe yourself?
 
 - intent: help
   examples: |
